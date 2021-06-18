@@ -1,8 +1,3 @@
-#This facilitates imports from the app directory
-
-import os
-from dotenv import load_dotenv
-
 from flask import Flask
 
 from web_app.routes.home_routes import home_routes
@@ -20,10 +15,3 @@ if __name__ == "__main__":
     my_app = create_app()
     my_app.run(debug=True)
 
-load_dotenv()
-
-APP_ENV = os.getenv("APP_ENV", default="development") # use "production" on a remote server
-
-cd madeline-weather-app
-git init
-heroku git:remote -a madeline-weather-app
